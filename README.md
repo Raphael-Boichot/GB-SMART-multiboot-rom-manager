@@ -42,6 +42,8 @@ This multiboot system does not support multiboot cartridges either (game compila
 
 Last but not least of a flaw, the multiboot is supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash carts will not work… Surprisingly BGB emulator supports this mapper.
 
+Just a last precision, GB SMART 16M / GB SMART 32M cartridges flashed with a single rom like a regular flashable cartridge works like a charm.
+
 ## Well, knowing these limitations, have fun with it !
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
