@@ -28,7 +28,7 @@ Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like directly sorting structures for example).
 
-## Known flaws
+## Why is it so unreliable ?
 
 I own the Parallel GB-transferer and I remind the multiboot support as beeing a very glitchy feature. I do not even remind been able to make it work even one single time correctly on real hardware. I though it was due to some noise on the parallel line port. In fact the multiboot support IS glitchy for real. 
 
