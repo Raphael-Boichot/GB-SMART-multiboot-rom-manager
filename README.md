@@ -34,7 +34,7 @@ I own the Parallel GB-transferer and I remind the multiboot support as beeing a 
 
 In fact the multiboot support was glitchy for real. 
 
-The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games still refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at most) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
+The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games still refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at best) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
 
 Pokémon games seem OK at first glance but do not forget that all games share one single sram, so any save erases the other.
 
