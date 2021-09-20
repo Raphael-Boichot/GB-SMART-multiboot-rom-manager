@@ -1,0 +1,3 @@
+The rules : 
+- no more than 15 files
+- no more than cartridge capacity
