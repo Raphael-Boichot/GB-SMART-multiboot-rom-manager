@@ -28,7 +28,7 @@ Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like directly sorting structures for example).
 
-## Knows flaws
+## Known flaws
 
 I own the Parallel GB-transferer and I remind the multiboot support as beeing a very glitchy feature. I do not even remind been able to make it work even one single time correctly. I though it was due to some noise on the parallel line port. In fact the multiboot support IS glitchy for real. The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games still refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at most) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). Pokémon games seem OK at first glance but do not forget that all games share one single sram, so any save erases the other.
 
@@ -36,4 +36,4 @@ Last but not least of a flaw, the multiboot is supported by GB SMART cards ONLY 
 
 ## Well, knowing these limitations, have fun with it !
 
-![alt text](http://url/to/img.png)
+![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
