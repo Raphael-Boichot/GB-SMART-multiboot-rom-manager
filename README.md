@@ -1,4 +1,5 @@
-# GB-SMART-multiboot-rom-manager
+# GB SMART multiboot rom manager for Game Boy
+
 A GNU Octave/Matlab tool to build a multiboot rom for GB SMART 16M / GB SMART 32M
 
 The purpose of this project is to rejuvenate the multiboot support for GB SMART 16M / GB SMART 32M flash cartridges that was abadon years ago.
