@@ -30,7 +30,9 @@ The code could seem weird for Matlab veterans but it was made to be fully compat
 
 ## Why is it so unreliable ?
 
-I own the Parallel GB-transferer and I remind the multiboot support as beeing a very glitchy feature. I do not even remind been able to make it work even one single time correctly on real hardware. I though it was due to some noise on the parallel line port. In fact the multiboot support IS glitchy for real. 
+I own the Parallel GB-transferer and I remind the multiboot support as beeing a very glitchy feature. I do not even remind been able to make it work even one single time correctly on real hardware. I though it was due to some noise on the parallel line port. 
+
+In fact the multiboot support was glitchy for real. 
 
 The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games still refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at most) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
 
