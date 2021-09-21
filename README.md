@@ -22,28 +22,30 @@ When booting the system, the custom multiboot rom searches for a Game Boy logo e
 
 ## How to use the rom manager ?
 
-Simply dump Game Boy roms in the /roms folder and run the code. The principle is simple : big roms first and first seen first placed. When no slots remain for writing, roms are simply rejected. If the cumulative size (2MB or 4MB) or number (15) of roms is bigger than the cartridge capacity, the code stops with an error message. The code generates a big OUTPUT.GB containing the whole « filesystem » that is ready to flash to your GB SMART card.
+Simply dump Game Boy roms in the /roms folder and run the code. The principle is simple : big roms first and first seen first placed. The multiboot "filesystem" is filled with big roms at higher addresses first to optimize the placement, then the size of rom and addresses are progressively reduced. When no slots remain for writing, roms are simply rejected. If the cumulative size (2MB or 4MB) or number (15) of roms is bigger than the cartridge capacity, the code stops with an error message. The code generates a big OUTPUT.GB containing the whole « filesystem » that is ready to flash to your GB SMART card. You can check the rom with BGB emulator to be sure that everything is OK.
 
 Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32M. I developped the software on GB SMART 32M but I assume the rules are the same for GB SMART 16M (Except for the total size).
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like directly sorting structures for example).
 
-## Why is it so unreliable ?
+## Why is it not 100 % reliable ?
 
 I own the Parallel GB-transferer and I remind the multiboot support as beeing a very glitchy feature. I do not even remind been able to make it work even one single time correctly on real hardware. I though it was due to some noise on the parallel line port. 
 
-In fact the multiboot support was glitchy for real. 
+In fact the multiboot support was kind of glitchy for real. 
 
-The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games still refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at best) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
+The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at best) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
 
 Pokémon games seem OK at first glance but do not forget that all games share one single sram, so any save erases the other.
 
-This multiboot system does not support multiboot cartridges either (game compilations), as a soft reboot makes the system crash.
+This multiboot system does not support multiboot cartridges either (game compilations), as a soft reboot makes the system crash (same problem than Link's Awakening).
 
-Last but not least of a flaw, the multiboot is supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… Surprisingly BGB emulator supports this mapper.
+Last but not least of a flaw, the multiboot is supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… Surprisingly BGB emulator fully supports this mapper.
 
-Just a last precision, a GB SMART 16M / GB SMART 32M cartridge flashed with a single rom like a regular flashable cartridge works like a charm.
+Just a last precision, a GB SMART 16M / GB SMART 32M cartridge flashed with a single rom like a regular flashable cartridge works like a charm wit any GB/GBC game.
 
 ## Well, knowing these limitations, have fun with it !
+
+In conclusion, the good way of using the multiboot support is to have just one big GB game with save feature (like Pokémon) and many small GB games on the card. GBC games are not advised regarding the system limitations.
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
