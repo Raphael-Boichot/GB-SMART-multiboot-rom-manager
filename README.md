@@ -50,5 +50,7 @@ Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (bo
 
 In conclusion, the good way of using the multiboot support is to have just one big GB game with save feature (like Pokémon) and many small GB games on the card. GBC games are midly advised in multiboot regarding the intrinsic system limitations.
 
+## Example of a well stuffed GB SMART 32M
+
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632243230540.png)
 
