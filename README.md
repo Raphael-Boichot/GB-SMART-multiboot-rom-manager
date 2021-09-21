@@ -9,7 +9,7 @@ The purpose of this project is to rejuvenate the multiboot support for GB SMART 
 
 In the early 2000, the GB SMART 16/32M were quite common flashable cartridges for Game Boy. They was bundled with a parallel-port flasher like the odd GB-Transferer. The GB SMART cartridges were able to emulate many common Game Boy mappers from this era and are still intersting pieces of hardware with a very broad compatility (even by today's standards).
 
-The parallel GB-transferer itself had a particular interesting feature : it was not only able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably special instructions to lock certain high address pins of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip.
+The parallel GB-transferer itself had a particular interesting feature: it was not only able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably special instructions to lock certain high address pins of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip.
 
 Unfortunately, the GB transferer software was not open access and became completely obsolete since Windows Vista. More recently the software support for parallel port was also abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
 
@@ -24,7 +24,7 @@ When booting the system, the custom multiboot rom searches for a Game Boy logo e
 
 ## How to use the rom manager ?
 
-Simply dump Game Boy roms in the /roms folder and run the code. The principle is simple : big roms first and first seen first placed. The multiboot "filesystem" is filled with big roms at higher addresses first to optimize the placement, then the size of rom and addresses are progressively reduced. When no slots remain for writing, roms are simply jumped. If the number of roms written is equal to the cartridge capacity, the code ends. The code generates a big OUTPUT.GB containing the whole « filesystem » that is ready to flash to your GB SMART card. You can check the rom with BGB emulator to be sure that everything is OK.
+Simply dump Game Boy roms in the /roms folder and run the code. The principle is simple: big roms first and first seen first placed. The multiboot "filesystem" is filled with big roms at higher addresses first to optimize the placement, then the size of rom and addresses are progressively reduced. When no slots remain for writing, roms are simply jumped. If the number of roms written is equal to the cartridge capacity, the code ends. The code generates a big OUTPUT.GB containing the whole « filesystem » that is ready to flash to your GB SMART card. You can check the rom with BGB emulator to be sure that everything is OK.
 
 Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32M. I developped the software on GB SMART 32M but I assume the rules are the same for GB SMART 16M (Except for the total size).
 
