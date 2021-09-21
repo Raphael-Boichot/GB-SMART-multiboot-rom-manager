@@ -38,11 +38,11 @@ The GNU Octave/Matlab code proposed here is much better than the original piece 
 
 Pokémon games seem OK at first glance but do not forget that all games share one single sram, so any save erases the other.
 
-This multiboot system does not support multiboot cartridges either (game compilations), as a soft reboot makes the system crash (same problem than Link's Awakening).
+This multiboot system does not support other multiboot cartridges either (game compilations), as a soft reboot makes the system crash (same problem than Link's Awakening). In fact any Game Boy game using an internal soft reboot will not be supported.
 
-Last but not least of a flaw, the multiboot is supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… Surprisingly BGB emulator fully supports this mapper.
+Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just be stuck to the boot menu as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
-Just a last precision, a GB SMART 16M / GB SMART 32M cartridge flashed with a single rom like a regular flashable cartridge works like a charm wit any GB/GBC game.
+Just a last precision, a GB SMART 16M / GB SMART 32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility list is even broader than an EZ-flash for example.
 
 ## Well, knowing these limitations, have fun with it !
 
