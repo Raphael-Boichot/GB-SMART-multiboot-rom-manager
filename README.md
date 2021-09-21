@@ -1,17 +1,17 @@
-# GB SMART multiboot rom manager for Game Boy
+# GB SMART 16/32M multiboot rom manager for Game Boy
 A GNU Octave/Matlab tool to build a multiboot rom for GB SMART 16M / GB SMART 32M flash cartridges.
 
-The purpose of this project is to rejuvenate the multiboot support for GB SMART 16M / GB SMART 32M flash cartridges that was abandoned years ago.
+The purpose of this project is to rejuvenate the multiboot support for GB SMART 16/32M flash cartridges that was abandoned years ago.
 
 ## The story
 
-In the early 2000, the GB SMART 16M / GB SMART 32M were common flashable cartridges for Game Boy. They was bundled with a parallel-port flasher like the odd GB-Transferer. The GB SMART cartridges were able to emulate many common Game Boy mappers from this era and are still intersting pieces of hardware with a very broad compatility (even by today's standards).
+In the early 2000, the GB SMART 16/32M were common flashable cartridges for Game Boy. They was bundled with a parallel-port flasher like the odd GB-Transferer. The GB SMART cartridges were able to emulate many common Game Boy mappers from this era and are still intersting pieces of hardware with a very broad compatility (even by today's standards).
 
 The parallel GB-transferer itself had a particular interesting feature : it was able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably special instructions to lock certain high address pins of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip.
 
 Unfortunately, the GB transferer software was not open access and became completely obsolete since Windows Vista. More recently the software support for parallel port was even abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
 
-In the other hand, GB SMART 16M / GB SMART 32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
+In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
 
 The global working principle of the multiboot rom is explained here in details: 
 https://www.insidegadgets.com/2019/05/24/a-look-into-the-gb-smart-16m-flash-cart-inspecting-the-multi-game-menu-adding-flashing-support-and-a-basic-menu-maker/
@@ -42,7 +42,7 @@ This multiboot system does not support other multiboot cartridges either (game c
 
 Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just be stuck to the boot menu as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
-Just a last precision, a GB SMART 16M / GB SMART 32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility list is even broader than an EZ-flash for example.
+Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility is even broader than an EZ-flash for example.
 
 ## Well, knowing these limitations, have fun with it !
 
