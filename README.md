@@ -11,7 +11,7 @@ In the early 2000, the GB SMART 16/32M were quite common flashable cartridges fo
 
 The parallel GB-transferer itself had a particular interesting feature : it was not only able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably special instructions to lock certain high address pins of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip.
 
-Unfortunately, the GB transferer software was not open access and became completely obsolete since Windows Vista. More recently the software support for parallel port was even abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
+Unfortunately, the GB transferer software was not open access and became completely obsolete since Windows Vista. More recently the software support for parallel port was also abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
 
 In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
 
@@ -30,13 +30,13 @@ Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like quick sorting of structures for example).
 
-## Why is it not 100 % reliable ?
+## Why it is not 100 % reliable ?
 
-I own the Parallel GB-transferer and I remind the multiboot support as beeing a very glitchy feature. I do not even remind been able to make it work even one single time correctly on real hardware. I though it was due to some noise on the parallel line port. 
+I own the Parallel GB-transferer and I remind the multiboot support as beeing a very unreliable feature. I do not even remind been able to make it work even one single time correctly on real hardware. I though it was due to some noise on my parallel port. 
 
 In fact the multiboot support was kind of glitchy for real. 
 
-The GNU Octave/Matlab code proposed here is much better than the original piece of crap of software, but certain games refuses to work in multiboot. Particularly the GBC support is particularly poor (a GBC game boots by default in DMG mode… at best) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
+The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software offered with the GB-transferer, but certain games still refuses to work in multiboot. Particularly the GBC support is average (a GBC game boots by default in DMG mode) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
 
 Pokémon games seem OK at first glance but do not forget that all games share one single sram, so any save erases the other.
 
