@@ -3,6 +3,8 @@ A GNU Octave/Matlab tool to build a multiboot rom for GB SMART 16M / GB SMART 32
 
 The purpose of this project is to rejuvenate the multiboot support for GB SMART 16/32M flash cartridges that was abandoned years ago.
 
+![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
+
 ## The story
 
 In the early 2000, the GB SMART 16/32M were quite common flashable cartridges for Game Boy. They was bundled with a parallel-port flasher like the odd GB-Transferer. The GB SMART cartridges were able to emulate many common Game Boy mappers from this era and are still intersting pieces of hardware with a very broad compatility (even by today's standards).
@@ -48,4 +50,3 @@ Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (bo
 
 In conclusion, the good way of using the multiboot support is to have just one big GB game with save feature (like Pokémon) and many small GB games on the card. GBC games are not advised regarding the intrinsic system limitations.
 
-![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
