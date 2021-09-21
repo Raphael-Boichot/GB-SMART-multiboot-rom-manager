@@ -27,8 +27,7 @@ end
 
 listing = dir('./rom/*.gb*');
 if length(listing)>15;
-    msgbox('The number of rom must be 15 or less !')
-    return
+    disp('The number of rom must be 15 or less !')
 end
 
 bytes=0;
@@ -36,8 +35,7 @@ for i=1:1:length(listing)
     bytes=bytes+listing(i).bytes;
 end
 if bytes>2^22
-    msgbox('The total size of roms is greater than 4MB !')
-    return
+    disp('The total size of roms is greater than 4MB !')
 end
 
 fid = fopen('CGBPACK.DAT','r');    
@@ -58,12 +56,13 @@ for i=1:1:heigth
     end
 end
 
+games=0;
 %now place the files to the good offset, biggest first
 for i=1:1:heigth
     rom_size=listing(i).bytes;
     %-------------------------------------------------------------------------
     if rom_size==2^21;
-        if mean(dumb4Mo(pos2048ko(end)))==255;
+        if mean(dumb4Mo(pos2048ko(end):pos2048ko(end)+rom_size-1))==255;
             fid=['./rom/',char(listing(i).name)];;
             disp(['Slot available for ',fid])
             fid = fopen(fid,'r');
@@ -71,6 +70,7 @@ for i=1:1:heigth
                 a=fread(fid);
             end
             fclose(fid);
+            games=games+1;
             dumb4Mo(pos2048ko(end):pos2048ko(end)+rom_size-1)=a;
             disp('File added to the Multiboot rom')
             %now disable any adresses in this range
@@ -88,7 +88,7 @@ for i=1:1:heigth
     %-------------------------------------------------------------------------
     if rom_size==2^20;
         if not(isempty(pos1024ko));
-            if mean(dumb4Mo(pos1024ko(end)))==255
+            if mean(dumb4Mo(pos1024ko(end):pos1024ko(end)+rom_size-1))==255
                 fid=['./rom/',char(listing(i).name)];;
                 disp(['Slot available for ',fid])
                 fid = fopen(fid,'r');
@@ -96,6 +96,7 @@ for i=1:1:heigth
                     a=fread(fid);
                 end
                 fclose(fid);
+                games=games+1;
                 dumb4Mo(pos1024ko(end):pos1024ko(end)+rom_size-1)=a;
                 disp('File added to the Multiboot rom')
                 %now disable any adresses higher than this range
@@ -115,7 +116,7 @@ for i=1:1:heigth
     %-------------------------------------------------------------------------
     if rom_size==2^19;
         if not(isempty(pos512ko));
-            if mean(dumb4Mo(pos512ko(end)))==255
+            if mean(dumb4Mo(pos512ko(end):pos512ko(end)+rom_size-1))==255
                 fid=['./rom/',char(listing(i).name)];
                 disp(['Slot available for ',fid])
                 fid = fopen(fid,'r');
@@ -123,6 +124,7 @@ for i=1:1:heigth
                     a=fread(fid);
                 end
                 fclose(fid);
+                games=games+1;
                 dumb4Mo(pos512ko(end):pos512ko(end)+rom_size-1)=a;
                 disp('File added to the Multiboot rom')
                 %now disable any adresses higher than this range
@@ -141,7 +143,7 @@ for i=1:1:heigth
     %-------------------------------------------------------------------------
     if rom_size==2^18;
         if not(isempty(pos256ko));
-            if mean(dumb4Mo(pos256ko(end)))==255
+            if mean(dumb4Mo(pos256ko(end):pos256ko(end)+rom_size-1))==255
                 fid=['./rom/',char(listing(i).name)];
                 disp(['Slot available for ',fid])
                 fid = fopen(fid,'r');
@@ -149,6 +151,7 @@ for i=1:1:heigth
                     a=fread(fid);
                 end
                 fclose(fid);
+                games=games+1;
                 dumb4Mo(pos256ko(end):pos256ko(end)+rom_size-1)=a;
                 disp('File added to the Multiboot rom')
                 %now disable any adresses higher than this range
@@ -166,7 +169,7 @@ for i=1:1:heigth
     %-------------------------------------------------------------------------
     if rom_size==2^17;
         if not(isempty(pos128ko));
-            if mean(dumb4Mo(pos128ko(end)))==255
+            if mean(dumb4Mo(pos128ko(end):pos128ko(end)+rom_size-1))==255
                 fid=['./rom/',char(listing(i).name)];
                 disp(['Slot available for ',fid])
                 fid = fopen(fid,'r');
@@ -174,6 +177,7 @@ for i=1:1:heigth
                     a=fread(fid);
                 end
                 fclose(fid);
+                games=games+1;
                 dumb4Mo(pos128ko(end):pos128ko(end)+rom_size-1)=a;
                 disp('File added to the Multiboot rom')
                 %now disable any adresses higher than this range
@@ -190,7 +194,7 @@ for i=1:1:heigth
     %-------------------------------------------------------------------------
     if rom_size==2^16;
         if not(isempty(pos64ko));
-            if mean(dumb4Mo(pos64ko(end)))==255
+            if mean(dumb4Mo(pos64ko(end):pos64ko(end)+rom_size-1))==255
                 fid=['./rom/',char(listing(i).name)];
                 disp(['Slot available for ',fid])
                 fid = fopen(fid,'r');
@@ -198,6 +202,7 @@ for i=1:1:heigth
                     a=fread(fid);
                 end
                 fclose(fid);
+                games=games+1;
                 dumb4Mo(pos64ko(end):pos64ko(end)+rom_size-1)=a;
                 disp('File added to the Multiboot rom')
                 %now disable any adresses higher than this range
@@ -213,7 +218,7 @@ for i=1:1:heigth
     %-------------------------------------------------------------------------
     if rom_size==2^15;
         if not(isempty(pos32ko));
-            if mean(dumb4Mo(pos32ko(end)))==255
+            if mean(dumb4Mo(pos32ko(end):pos32ko(end)+rom_size-1))==255
                 fid=['./rom/',char(listing(i).name)];
                 disp(['Slot available for ',fid])
                 fid = fopen(fid,'r');
@@ -221,6 +226,7 @@ for i=1:1:heigth
                     a=fread(fid);
                 end
                 fclose(fid);
+                games=games+1;
                 dumb4Mo(pos32ko(end):pos32ko(end)+rom_size-1)=a;
                 disp('File added to the Multiboot rom')
                 %disable itself
@@ -230,6 +236,14 @@ for i=1:1:heigth
             fid=char(listing(i).name);
             disp(['Slot FULL for ',fid,': file rejected !'])
         end
+    end
+    if games==15;
+        disp('Maximum number of games reached');
+        fid = fopen('OUTPUT.GB','w');
+        a=fwrite(fid,dumb4Mo);
+        fclose(fid);
+        disp('16M merged rom created, ready to burn !')
+        return;
     end
 end
 
