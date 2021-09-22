@@ -38,7 +38,7 @@ In fact the multiboot support becomes reliable with a good tool to organise roms
 
 The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some.
 
-All Pokémon games are OK but do not forget that all games share one single sram, so any save erases the other. GBC game boots by default in DMG mode. Manual soft reset with START+SELECT+A+B is still supported.
+All Pokémon games are OK but do not forget that all games share one single sram, so any save erases the other. GBC games boot by default in DMG mode. Manual soft reset with START+SELECT+A+B is still supported.
 
 Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just return to the boot menu while booting a game as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
