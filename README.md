@@ -32,7 +32,7 @@ The code could seem weird for Matlab veterans but it was made to be fully compat
 
 ## Why it is not 100 % reliable...
 
-I own the Parallel GB-transferer and I remind the multiboot support as beeing a very unreliable feature. I do not even remind been able to make it work one single time correctly on real hardware. I though it was due to some noise on my parallel port so I used it essentially to extract images from my Game Boy Camera and dump roms and sram.
+I own the Parallel GB-transferer and I remind the multiboot support as beeing a very unreliable feature. I do not even remind been able to make it work one single time correctly on real hardware. I though it was due to some noise on my parallel port so I used the GB-transferer essentially to extract images from my Game Boy Camera and dump roms and sram.
 
 In fact the multiboot support was kind of glitchy for real. 
 
