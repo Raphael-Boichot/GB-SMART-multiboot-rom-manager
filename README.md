@@ -52,7 +52,7 @@ In conclusion, the good way of using the multiboot support is to have just one b
 
 ## Example of a well stuffed GB SMART 32M made with the codes (all games working).
 . stands for regular Game Boy games
-- stands for Game Boy games using sram save
+_ stands for Game Boy games using sram save
 ~ stands for GBC games
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632243230540.png)
