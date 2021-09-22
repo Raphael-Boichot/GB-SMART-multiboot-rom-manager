@@ -34,19 +34,15 @@ The code could seem weird for Matlab veterans but it was made to be fully compat
 
 I own the Parallel GB-transferer and I remind the multiboot support as beeing a very unreliable feature. I do not even remind been able to make it work one single time correctly on real hardware. I though it was due to some noise on my parallel port so I used the GB-transferer essentially to extract images from my Game Boy Camera and dump roms and sram.
 
-In fact the multiboot support was kind of glitchy for real. 
+In fact the multiboot support becomes interesting with a good tool to organise roms (like mine ^_^) and a good flasher software (https://github.com/lesserkuma/FlashGBX/releases).
 
-The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software offered with the GB-transferer, but certain games still refuses to work in multiboot. Particularly the GBC support is average (a GBC game boots by default in DMG mode) and game like Links Awakening works but crashes when saving (saving make the game reboot in an undesired state). 
+The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some.
 
-Pokémon games seem OK at first glance but do not forget that all games share one single sram, so any save erases the other.
+All Pokémon games are OK but do not forget that all games share one single sram, so any save erases the other. GBC game boots by default in DMG mode. Manual soft reset with START+SELECT+A+B is still supported.
 
-This multiboot system does not support other multiboot cartridges either (game compilations), as a soft reboot makes the system crash (same problem than Link's Awakening). In fact any Game Boy game using an internal soft reboot will not be supported.
+Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just return to the boot menu while booting a game as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
-Manual soft reset with START+SELECT+A+B is still supported.
-
-Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just be stuck to the boot menu as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
-
-Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility is even broader than an EZ-flash for example, the GB SMART mapper itself is excellent !
+Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom works like a charm with all GB/GBC games (Except few ones using the HuCx mappers). I found that the game compatibility is even broader than an EZ-flash for example, the GB SMART mapper itself is excellent !
 
 ## Well, knowing these limitations, have fun with it !
 
