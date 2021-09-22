@@ -42,6 +42,8 @@ Pokémon games seem OK at first glance but do not forget that all games share on
 
 This multiboot system does not support other multiboot cartridges either (game compilations), as a soft reboot makes the system crash (same problem than Link's Awakening). In fact any Game Boy game using an internal soft reboot will not be supported.
 
+Manual soft reset with START+SELECT+A+B is still supported.
+
 Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just be stuck to the boot menu as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
 Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility is even broader than an EZ-flash for example, the GB SMART mapper itself is excellent !
