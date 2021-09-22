@@ -54,7 +54,7 @@ In conclusion, the good way of using the multiboot support is to have just one b
 
 - =>XX.romname stands for regular Game Boy games
 - =>XX-romname stands for Game Boy games using sram save
-- =>XX~romname stands for Game Boy Color games
+- =>XX~romname stands for Game Boy Color games (whatever the effective DMG mode compatibility)
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632243230540.png)
 
