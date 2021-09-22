@@ -44,7 +44,7 @@ This multiboot system does not support other multiboot cartridges either (game c
 
 Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just be stuck to the boot menu as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
-Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility is even broader than an EZ-flash for example.
+Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom (both GB/GBC games) works like a charm. I found that the game compatibility is even broader than an EZ-flash for example, the GB SMART mapper itself is excellent !
 
 ## Well, knowing these limitations, have fun with it !
 
