@@ -47,10 +47,10 @@ Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom wor
 In conclusion, the good way of using the multiboot support is to have just one big GB game with save feature (like Pokémon) and many smaller GB games on the card.
 
 ## Example of a well stuffed GB SMART 32M made with the codes (all games working).
-Some menu explanatiions:
+Some menu explanations:
 - =>XX . romname: stands for regular Game Boy games
-- =>XX - romname: stands for Game Boy games using sram save
-- =>XX ~ romname: stands for Game Boy Color games (whatever the effective DMG mode compatibility)
+- =>XX - romname: stands for Game Boy games using sram save feature
+- =>XX ~ romname: stands for Game Boy Color games (whatever the effective DMG mode compatibility or save feature)
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632243230540.png)
 
