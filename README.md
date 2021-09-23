@@ -7,7 +7,7 @@ The purpose of this project is to rejuvenate the handy multiboot rom support for
 
 ## What's inside ?
 
-The GB SMART 32M comprises a M4-64/32-15JC-18JI Lattice CPLD which plays the role of generic mapper, a single Intel E28F320J5-120 32Mb (4 MB) flash memory and a ISSI IS62LV1024LL-70H 128kB CMOS static ram. The GB SMART 16M has a more original design: it comprises the same CPLD as mapper, a Mitsubishi M5M51008FP 131kB CMOS static ram and 4 ATMEL AT9BV040-20TI 8Mb (1MB) flash chips.
+The GB SMART 32M comprises a M4-64/32-15JC-18JI Lattice CPLD which plays the role of generic mapper, a single Intel E28F320J5-120 32Mb (4 MB) flash memory and a ISSI IS62LV1024LL-70H 128kB CMOS static ram. The GB SMART 16M has a more original design: it comprises the same CPLD as mapper, a Mitsubishi M5M51008FP 131kB CMOS static ram and 4 ATMEL AT9BV040-20TI 8Mb (1MB) flash chips. Clearly the GB SMART 32M have a more finished design.
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/GBSMART%20comparison.png)
 
@@ -32,7 +32,7 @@ When booting the system, the custom multiboot rom searches for a Game Boy boot l
 
 Simply dump Game Boy roms in the /roms folder and run the code. The principle is simple: big roms first and first seen first placed. The multiboot "filesystem" is filled with big roms at higher addresses first to optimize the placement, then the size of rom and addresses are progressively reduced. If the number of roms written is equal to the cartridge capacity, the code ends. The code generates a big OUTPUT.GB containing the whole « filesystem » that is ready to flash to your GB SMART card. You can check the rom with BGB emulator to be sure that everything is OK.
 
-Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32M. I developped the software on GB SMART 32M but I assume the rules are the same for GB SMART 16M (Except for the total size).
+Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32M. I developped the software on GB SMART 32M (I do not own a 16M) but I assume the rules are the same for the GB SMART 16M (Except for the total size). I'm just not totally sure wether the GB SMART 16M can split a 1MB rom on two chips or not, so in case of failure to read 1MB roms, just use 512 kB roms and open an issue so that I will correct the code.
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like quick sorting of structures for example).
 
