@@ -20,7 +20,7 @@ https://www.insidegadgets.com/2019/05/24/a-look-into-the-gb-smart-16m-flash-cart
 
 The custom multiboot rom must be at the root of the GB SMART cartridge (first 32 kB) and the other roms are aligned at offsets multiple of there own size (for example 32 kB roms must be aligned at offsets 0x8000, 0x10000, 0x18000, etc., 512 kB roms must be aligned at offsets 0x80000, 0x10000, etc.). Consequence : GB SMART 16M (2MB) can at most handle one 1MB rom (plus other smaller roms) and GB SMART 32M (4MB) one 2MB rom + one 1MB rom (plus other smaller roms). Final rule, the multiboot can handle 15 roms only (in fact 16, 15 + the custom multiboot rom) to fit on the 18 tile lines of a Game Boy screen. 
 
-When booting the system, the custom multiboot rom searches for a Game Boy logo every 32 kB after itself, deduces starting adresses for rom (and mapper pinout locking), creates a multiboot menu and allows the player to boot the desired rom. The projet here provides open access tools to recreate a fully working multiboot rom system that fits a maximum number of roms into the GB SMART cards without using the original software. 
+When booting the system, the custom multiboot rom searches for a Game Boy boot logo every 32 kB after itself, deduces starting adresses for rom (and mapper pinout locking), creates a multiboot menu and allows the player to boot the desired rom. The projet here provides open access tools to recreate a fully working multiboot rom system that fits a maximum number of roms into the GB SMART cards without using the original software. 
 
 ## How to use the rom manager ?
 
