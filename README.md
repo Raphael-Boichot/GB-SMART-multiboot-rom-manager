@@ -11,7 +11,7 @@ In the early 2000, the GB SMART 16/32M cards were quite common flashable cartrid
 
 The parallel GB-transferer itself had a particular interesting feature: it was not only able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably special instructions to lock certain high address pins of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip.
 
-Unfortunately, the GB transferer software was not open access and became completely obsolete since Windows Vista. More recently the software support for parallel port was also abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
+Unfortunately, the GB transferer software was not open access and became completely obsolete since the end of support for Windows 2000. More recently the software support for parallel port was also abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
 
 In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
 
