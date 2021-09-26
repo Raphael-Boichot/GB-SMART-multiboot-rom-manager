@@ -26,9 +26,9 @@ pos2048ko(k)=k*2^21+1;
 end
 
 listing = dir('./rom/*.gb*');
-if length(listing)>15;
-    disp('The number of rom must be 15 or less !')
-end
+% if length(listing)>15;
+%     disp('The number of rom must be 15 or less !')
+% end
 
 bytes=0;
 for i=1:1:length(listing)
@@ -237,14 +237,14 @@ for i=1:1:heigth
             disp(['Slot FULL for ',fid,': file rejected !'])
         end
     end
-    if games==15;
-        disp('Maximum number of games reached');
-        fid = fopen('OUTPUT.GB','w');
-        a=fwrite(fid,dumb4Mo);
-        fclose(fid);
-        disp('16M merged rom created, ready to burn !')
-        return;
-    end
+%     if games==15;
+%         disp('Maximum number of games reached');
+%         fid = fopen('OUTPUT.GB','w');
+%         a=fwrite(fid,dumb4Mo);
+%         fclose(fid);
+%         disp('16M merged rom created, ready to burn !')
+%         return;
+%     end
 end
 
 
