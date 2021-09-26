@@ -32,7 +32,7 @@ When booting the system, the custom multiboot rom searches for a Game Boy boot l
 
 Simply dump Game Boy roms in the /roms folder and run the code. The principle is simple: big roms first and first seen first placed. The multiboot "filesystem" is filled with big roms at higher addresses first to optimize the placement, then the size of rom and addresses are progressively reduced. If the number of roms written is equal to the cartridge capacity, the code ends. The code generates a big OUTPUT.GB containing the whole « filesystem » that is ready to flash to your GB SMART card. You can check the rom with BGB emulator to be sure that everything is OK.
 
-Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32M. I developped the software on GB SMART 32M (I do not own a 16M) but I assume the rules are the same for the GB SMART 16M (Except for the total size). I'm just not totally sure wether the GB SMART 16M can split a 1MB rom on two chips or not, so in case of failure to read 1MB roms, just use 512 kB roms and open an issue so that I will correct the code.
+Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32M. I developped the software on GB SMART 32M (I do not own a 16M) but I assume the rules are the same for the GB SMART 16M (Except for the total size). I'm just not totally sure wether the GB SMART 16M can split a 1MB rom on two chips or not, so in case of failure to read 1MB roms, just use 512 kB roms at most and open an issue so that I will correct the code.
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like quick sorting of structures for example).
 
