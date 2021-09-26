@@ -21,6 +21,8 @@ Unfortunately, the GB transferer software was not open access and became complet
 
 In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
 
+It is still possible to buy a new GB SMART 32M from old stocks in 2021. It is in particular famous for its LSDJ support. The total amount of GB SMART cards produced is unknown.
+
 The global working principle of the multiboot rom is explained here in details: 
 https://www.insidegadgets.com/2019/05/24/a-look-into-the-gb-smart-16m-flash-cart-inspecting-the-multi-game-menu-adding-flashing-support-and-a-basic-menu-maker/
 
