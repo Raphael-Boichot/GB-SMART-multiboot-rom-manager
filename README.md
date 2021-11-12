@@ -44,6 +44,8 @@ In fact the multiboot support becomes reliable with a good tool to organise roms
 
 The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some. All Pokémon games compatible with DMG mode are working perfectly.
 
+It seems that the incompatible games all share a MBC1 mapper that is poorly supported by the GB SMART mapper (which is basically a MBC5 clone). It is possible to patch some MBC1 games to restore compatibility with MBC5 mapper and thus made them work with GB SMART card: https://thegaminguniverse.org/ninjagaiden4/mottzilla/smartcard.html
+
 Be carefull, all games share the same single sram for saving, so any save erases the other. So the good way of using the multiboot support is to have just one game using the save feature on the card and many other regular games aside.
 
 GBC games boot by default in DMG mode (only mode supported), even on GBC or GBA. Manual soft reset with START+SELECT+A+B is still supported.
