@@ -1,7 +1,7 @@
 # GB SMART 16/32M multiboot rom manager for Game Boy
 A GNU Octave/Matlab tool to build a multiboot rom for the EMS GB SMART 16M / GB SMART 32M flash cartridges.
 
-The purpose of this project is to rejuvenate the handy multiboot rom support for EMS GB SMART 16/32M flash cartridges that was abandoned years ago. EMS company website is still alive today showing examples of the weird products they sold until 2007: http://www.hkems.com/m_main.htm
+The purpose of this project is to rejuvenate the handy multiboot rom support for EMS GB SMART 16/32M flash cartridges that was abandoned years ago. EMS company website is still alive today showing examples of the [weird products they sold until 2007](http://www.hkems.com/m_main.htm)
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
 
@@ -19,7 +19,7 @@ The parallel GB-transferer itself had a particular interesting feature: it was n
 
 Unfortunately, the GB transferer software was not open access and became completely obsolete since the end of support for Windows 2000. More recently the software support for parallel port was also abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
 
-In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
+In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible [good flasher](https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
 
 The global working principle of the multiboot rom is explained [here in details](https://www.insidegadgets.com/2019/05/24/a-look-into-the-gb-smart-16m-flash-cart-inspecting-the-multi-game-menu-adding-flashing-support-and-a-basic-menu-maker/)
 
@@ -43,7 +43,7 @@ In fact the multiboot support becomes reliable with a good tool to organise roms
 
 The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some. All Pokémon games compatible with DMG mode are working perfectly.
 
-It seems that the **GB SMART series is compatible with MBC3 and MBC5 mappers game only**. It is possible to [patch some MBC1 games to restore compatibility](https://thegaminguniverse.org/ninjagaiden4/mottzilla/smartcard.html) with MBC5 mapper and thus made them work with GB SMART card. 
+It seems that the **GB SMART series is compatible with MBC3 and MBC5 mappers game only**. It is possible to [patch some MBC1 games to restore compatibility](https://gbatemp.net/threads/gameboy-patch-a-game-from-mbc1-to-mbc5-memory-bank-controllers.542876/) with MBC5 mapper and thus made them work with GB SMART card. 
 
 Be carefull, all games share the same single sram for saving, so any save erases the other (like with the MMM01 mapper). So the good way of using the multiboot support is to have just one game using the save feature on the card and many other regular games aside.
 
