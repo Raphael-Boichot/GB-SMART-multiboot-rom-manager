@@ -15,14 +15,13 @@ The GB SMART 32M comprises a M4-64/32-15JC-18JI Lattice CPLD which plays the rol
 
 In the mid 2000s, the GB SMART 16/32M cards were quite common flashable cartridges for Game Boy. They were bundled with a parallel-port flasher like the odd GB-Transferer. The GB SMART cartridges were able to support some common Game Boy mappers from this era and are still intersting pieces of hardware with a very broad compatility (even by today's standards). They were sometimes grossly relabeled with other brand names but were easily recognizable due to their clear electric blue shell. It is still possible to buy a new GB SMART 32M from old stocks in 2021. It is in particular famous for its LSDJ support. The total amount of GB SMART cards produced is unknown.
 
-The parallel GB-transferer itself had a particular interesting feature: it was not only able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge with a dedicated soft: the EMS GB SMART Writer. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably [special instructions to lock certain high address pins](https://gbdev.gg8.se/wiki/articles/Memory_Bank_Controllers#EMS) of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip.
+The parallel GB-transferer itself had a particular interesting feature: it was not only able to flash single rom and dump cartridges, but it was also able to create a multiboot rom cartridge with a dedicated soft: the EMS GB SMART Writer. The principle was to inject a particular custom multiboot rom first, then the other games to the flash chip. The custom multiboot rom had probably [special instructions to lock certain high address pins](https://gbdev.gg8.se/wiki/articles/Memory_Bank_Controllers#EMS) of the cartridge custom mapper which allow any game to be seen as working with normal addresses range from a Game Boy, whatever its actual position in the flash chip. In its design, functionning of this mapper is very similar to the [MMM01 mapper chip](https://wiki.tauwasser.eu/view/MMM01) but without proper MBC1 emulation as we will see.
 
 Unfortunately, the GB transferer software was not open access and became completely obsolete since the end of support for Windows 2000. More recently the software support for parallel port was also abandon on Windows. So the GB-transferers now sleep in drawers for eternity.
 
 In the other hand, GB SMART 16/32M cartridges are still usable today with any compatible good flasher (https://www.gbxcart.com/) and the custom multiboot rom is easy to find on internet as it is a simple .gb file.
 
-The global working principle of the multiboot rom is explained here in details: 
-https://www.insidegadgets.com/2019/05/24/a-look-into-the-gb-smart-16m-flash-cart-inspecting-the-multi-game-menu-adding-flashing-support-and-a-basic-menu-maker/
+The global working principle of the multiboot rom is explained [here in details](https://www.insidegadgets.com/2019/05/24/a-look-into-the-gb-smart-16m-flash-cart-inspecting-the-multi-game-menu-adding-flashing-support-and-a-basic-menu-maker/)
 
 The custom multiboot rom must be at the root of the GB SMART cartridge (first 32 kB) and the other roms are aligned at offsets multiple of there own size (for example 32 kB roms must be aligned at offsets 0x8000, 0x10000, 0x18000, etc., 512 kB roms must be aligned at offsets 0x80000, 0x10000, etc.). Consequence : GB SMART 16M (2MB) can at most handle one 1MB rom (plus other smaller roms) and GB SMART 32M (4MB) one 2MB rom + one 1MB rom (plus other smaller roms). 
 
@@ -40,19 +39,17 @@ The code could seem weird for Matlab veterans but it was made to be fully compat
 
 I own the Parallel GB-transferer since about 2007 and I remind that the multiboot support was a very unreliable feature. I do not even remind been able to make it work one single time correctly on real hardware. I though it was due to some noise on my parallel port so I used the GB-transferer essentially to extract images from my Game Boy Camera and dump roms and sram from games.
 
-In fact the multiboot support becomes reliable with a good tool to organise roms (like mine ^_^) and a good flasher software (https://github.com/lesserkuma/FlashGBX/releases).
+In fact the multiboot support becomes reliable with a good tool to organise roms (like mine ^_^) and a [good flasher software](https://github.com/lesserkuma/FlashGBX/releases).
 
 The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some. All Pokémon games compatible with DMG mode are working perfectly.
 
-It seems that the incompatible games all share a MBC1 mapper that is poorly supported by the GB SMART mapper (which is basically a MBC5 clone). It is possible to patch some MBC1 games to restore compatibility with MBC5 mapper and thus made them work with GB SMART card: https://thegaminguniverse.org/ninjagaiden4/mottzilla/smartcard.html
+It seems that the **GB SMART series is compatible with MBC3 and MBC5 mappers game only**. It is possible to [patch some MBC1 games to restore compatibility](https://thegaminguniverse.org/ninjagaiden4/mottzilla/smartcard.html) with MBC5 mapper and thus made them work with GB SMART card. 
 
-Be carefull, all games share the same single sram for saving, so any save erases the other. So the good way of using the multiboot support is to have just one game using the save feature on the card and many other regular games aside.
+Be carefull, all games share the same single sram for saving, so any save erases the other (like with the MMM01 mapper). So the good way of using the multiboot support is to have just one game using the save feature on the card and many other regular games aside.
 
 GBC games boot by default in DMG mode (only mode supported), even on GBC or GBA. Manual soft reset with START+SELECT+A+B is still supported.
 
-Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just return to the boot menu while booting a game as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
-
-Just a last precision, a GB SMART 16/32M cartridge flashed with a single rom works like a charm with all GB/GBC games (except a bunch using the HuCx mappers) like other flashcards available in 2021. I found that the game compatibility is even broader than an EZ-flash Jr for example, the GB SMART mapper itself is excellent !
+Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just return to the boot menu while booting a game as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper. The GB SMART series could of course be flashed with just one game (without using the multiboot option) as a regular flash cartridge.
 
 ## Example of a well stuffed GB SMART 32M made with the codes (all games working).
 Some menu explanations:
