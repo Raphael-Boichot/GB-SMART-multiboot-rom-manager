@@ -35,13 +35,13 @@ The code could seem weird for Matlab veterans but it was made to be fully compat
 
 I own the Parallel GB-transferer since about 2007 and I remind that the multiboot support was a very unreliable feature. I do not even remind been able to make it work one single time correctly on real hardware. I though it was due to some noise on my parallel port so I used the GB-transferer essentially to extract images from my Game Boy Camera and dump roms and sram from games.
 
-In fact the multiboot support becomes reliable with a good tool to organise roms (like mine ^_^) and a [good flasher software](https://github.com/lesserkuma/FlashGBX/releases).
+In fact the multiboot support becomes surprinsingly reliable with a good tool to organise roms (like mine ^_^) and a [good flasher software](https://github.com/lesserkuma/FlashGBX/releases).
 
-The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some. All Pokémon games compatible with DMG mode are working perfectly.
+The GNU Octave/Matlab code proposed here is much better than the original piece of crap of Chinese software bundled with the GB-transferer, but certain games still refuses to work in multiboot, essentially due to the particular mapper. To cite some of them: Game Boy Camera (well, it's pointless but why not after all), Some versions of Link's Awakening (DMG version crashes at save screen but DX version is OK), NIV Bible & the 20 Lost Levels of Joshua (yep, no Bible on GB SMART !), Super Mario Land 2 (graphical glitches but Wario series is OK), to cite some. All Pokémon games compatible with DMG mode are working perfectly.
 
-It seems that the **GB SMART series is compatible with MBC3 and MBC5 mappers game only**. It is possible to [patch some MBC1 games to restore compatibility](https://gbatemp.net/threads/gameboy-patch-a-game-from-mbc1-to-mbc5-memory-bank-controllers.542876/) with MBC5 mapper and thus made them work with GB SMART card. 
+It seems after various tests that the **GB SMART series is compatible with MBC3 and MBC5 mappers game only**. It is possible to [patch some MBC1 games to restore compatibility](https://gbatemp.net/threads/gameboy-patch-a-game-from-mbc1-to-mbc5-memory-bank-controllers.542876/) with MBC5 mapper and thus made them work with GB SMART card. All other weird mappers are so excluded from the compatibility list (HuCx, Wisdom Tree, MAC-GBD, MBC6, MBC7, MMM01 and perhaps MBC2 too).
 
-Be carefull, all games share the same single sram for saving, so any save erases the other (like with the MMM01 mapper). So the good way of using the multiboot support is to have just one game using the save feature on the card and many other regular games aside.
+Be carefull, all games share the same single sram for saving, so any save erases the other. So the good way of using the multiboot support is to have just one game using the save feature on the card and many other regular games aside.
 
 GBC games boot by default in DMG mode (only mode supported), even on GBC or GBA. Manual soft reset with START+SELECT+A+B is still supported.
 
