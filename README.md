@@ -5,7 +5,7 @@ The purpose of this project is to rejuvenate the handy multiboot rom support for
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
 
-## What's inside the cards ?
+## What's inside the carts ?
 
 The GB SMART 32M comprises a M4-64/32-15JC-18JI Lattice CPLD which plays the role of generic mapper, a single Intel E28F320J5-120 32Mb (4 MB) flash memory and a ISSI IS62LV1024LL-70H 128kB CMOS static ram. The GB SMART 16M has a more original design: it comprises the same CPLD as mapper, a Mitsubishi M5M51008FP 131kB CMOS static ram and 4 ATMEL AT9BV040-20TI 8Mb (1MB) flash chips. Clearly the GB SMART 32M have a more finished design. Both have no RTC (real time clock).
 
