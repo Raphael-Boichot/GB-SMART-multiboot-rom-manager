@@ -45,10 +45,6 @@ Be carefull, all games share the same single sram for saving, so any save erases
 
 Last but not least, the multiboot feature is of course supported by GB SMART cards ONLY due to their particular custom mapper, so any other flash cart will not work… By using a regular flashable cartridge, you will just return to the boot menu while booting a game as address range locking is not available. Surprisingly the BGB emulator fully supports this weird mapper.
 
-# Funfact
-
-I bought the GB Smart 32M cartridge plus the parallel GB Transferer around 2007 via Paypal from HK, with some common shipping options (it was quite cheap). I received the device in France 3 days later (with the HK stamps). Today, I still don't understand how this could be possible.
-
 # Example of a well stuffed GB SMART 32M made with the codes (all games working).
 Some menu explanations:
 - =>XX . romname: stands for DMG or GBC games without save feature
@@ -56,4 +52,8 @@ Some menu explanations:
 - =>XX ~ romname: stands for GBC games using save feature
 
 ![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632243230540.png)
+
+# Funfact
+
+I bought the GB Smart 32M cartridge plus the parallel GB Transferer around 2007 via Paypal from HK, with some common shipping options (it was quite cheap). I received the device in France 3 days later (with the HK stamps). Today, I still don't understand how this could be possible.
 
