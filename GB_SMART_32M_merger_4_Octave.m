@@ -1,6 +1,6 @@
 clc
 clear
-delete 'OUTPUT.GB' 
+delete 'OUTPUT.GB'
 dumb4Mo=255*ones(2^22,1);
 %calculate all possible starting offsets for any rom into the multiboot
 for k=1:1:127
@@ -25,7 +25,7 @@ for k=1:1:1
 pos2048ko(k)=k*2^21+1;
 end
 
-listing = dir('./rom/*.gb*');
+listing = (dir('rom/*.gb*'));
 % if length(listing)>15;
 %     disp('The number of rom must be 15 or less !')
 % end
@@ -38,7 +38,7 @@ if bytes>2^22
     disp('The total size of roms is greater than 4MB !')
 end
 
-fid = fopen('CGBPACK.DAT','r');    
+fid = fopen('CGBPACK.DAT','r');
 while ~feof(fid)
 a=fread(fid);
 end
@@ -251,4 +251,4 @@ end
 fid = fopen('OUTPUT.GB','w');
 a=fwrite(fid,dumb4Mo);
 fclose(fid);
-disp('32M merged rom created, ready to burn !')                    
+disp('32M merged rom created, ready to burn !')
