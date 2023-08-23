@@ -3,7 +3,7 @@ A GNU Octave/Matlab tool to build a multiboot rom for the EMS GB SMART 16M / GB 
 
 The purpose of this project is to rejuvenate the handy multiboot rom support for EMS GB SMART 16/32M flash cartridges that was abandoned years ago. EMS company website is still alive today showing examples of the [weird products they sold until 2007](http://www.hkems.com/m_main.htm)
 
-![GB SMART 32M](https://github.com/Raphael-Boichot/GB-SMART-multiboot-rom-manager/blob/main/1632161467401.png)
+![GB SMART 32M](blob/main/Images/GBSMART32M_with_GBxCart.jpg)
 
 # What's inside the carts ?
 
