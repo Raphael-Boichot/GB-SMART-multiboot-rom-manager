@@ -1,4 +1,4 @@
-# GB SMART 16/32M multiboot rom manager for Game Boy
+# GB SMART 16/32M multiboot rom manager
 A GNU Octave/Matlab tool to build a multiboot rom for the EMS GB SMART 16M / GB SMART 32M flash cartridges.
 
 The purpose of this project is to rejuvenate the handy multiboot rom support for EMS GB SMART 16/32M flash cartridges that was abandoned years ago. EMS company website is still alive today showing examples of the [weird products they sold until 2007](http://www.hkems.com/m_main.htm)
