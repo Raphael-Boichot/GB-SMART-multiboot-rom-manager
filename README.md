@@ -31,7 +31,7 @@ Two versions of code are proposed : one for GB SMART 16M and one for GB SMART 32
 
 The code could seem weird for Matlab veterans but it was made to be fully compatible with GNU Octave so some advance features of Matlab were not usable (like quick sorting of structures for example).
 
-# Compatibilty issues
+# Mapper compatibility
 
 The multiboot support was a very unreliable feature at the time. I do not even remind been able to make it work one single time correctly on real hardware. I though it was due to some noise on my parallel port so I used the GB-transferer essentially to extract images from my Game Boy Camera and dump roms and sram from games.
 
