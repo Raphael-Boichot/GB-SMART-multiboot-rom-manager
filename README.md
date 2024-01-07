@@ -1,3 +1,5 @@
+**Note: this archive is no longer maintained since Januray 2024. Enjoy it as it is !**
+
 # GB SMART 16/32M multiboot rom manager
 A GNU Octave tool to build a multiboot rom for the EMS GB SMART 16M / GB SMART 32M flash cartridges.
 
