@@ -3,24 +3,12 @@ clear
 delete 'OUTPUT.GB'
 dumb2Mo=255*ones(2^21,1);
 %calculate all possible starting offsets for any rom into the multiboot
-for k=1:1:63
-pos32ko(k)=k*2^15+1;
-end
-for k=1:1:31
-pos64ko(k)=k*2^16+1;
-end
-for k=1:1:15
-pos128ko(k)=k*2^17+1;
-end
-for k=1:1:7
-pos256ko(k)=k*2^18+1;
-end
-for k=1:1:3
-pos512ko(k)=k*2^19+1;
-end
-for k=1:1:1
-pos1024ko(k)=k*2^20+1;
-end
+pos32ko   = (1:63)  * 2^15 + 1;
+pos64ko   = (1:31)  * 2^16 + 1;
+pos128ko  = (1:15)  * 2^17 + 1;
+pos256ko  = (1:7)   * 2^18 + 1;
+pos512ko  = (1:3)   * 2^19 + 1;
+pos1024ko = (1:1)   * 2^20 + 1;
 
 listing = (dir('rom/*.gb*'));
 % if length(listing)>15;
